@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Liminal Salt — A self-hosted LLM chatbot</title>
+	<meta name="description" content="A self-hosted LLM chatbot with persistent per-persona memory, customizable personas, and a roleplay mode. Runs locally; state lives in plain JSON and Markdown files.">
+	<meta property="og:title" content="Liminal Salt">
+	<meta property="og:description" content="A self-hosted LLM chatbot with persistent per-persona memory, customizable personas, and a roleplay mode.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://liminalsalt.app/">
+	<meta property="og:image" content="https://liminalsalt.app/images/main-screenshot.png">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/theme-toggle.js"></script>
+	<script src="js/modal.js" defer></script>
+</head>
+<body>
+	<a href="#main" id="skip-link">Skip to main content</a>
+
+	<header class="site-header">
+		<div class="container site-header-inner">
+			<a href="/" class="site-title">Liminal Salt</a>
+			<button id="theme-toggle" type="button" aria-label="Toggle theme" class="theme-toggle-btn"></button>
+		</div>
+	</header>
+
+	<main id="main">
+
+		<!-- Hero -->
+		<section class="hero">
+			<div class="container">
+				<h1>Liminal Salt</h1>
+				<p class="hero-tagline">
+					A self-hosted LLM chatbot with persistent per-persona memory,
+					customizable personas, and a roleplay mode. Runs locally; state
+					lives in plain JSON and Markdown files on your machine.
+				</p>
+				<div class="hero-cta">
+					<a class="btn btn-primary" href="https://github.com/irvj/liminal-salt" target="_blank" rel="noopener">View on GitHub</a>
+					<a class="btn btn-outline" href="#quick-start">Quick start</a>
+				</div>
+				<div class="hero-screenshot">
+					<img src="images/main-screenshot.png" alt="Liminal Salt main interface — sidebar with pinned and grouped chat sessions, central input field" width="1683" height="950">
+				</div>
+			</div>
+		</section>
+
+		<!-- Why -->
+		<section class="section" id="why">
+			<div class="container">
+				<h2>Why Liminal Salt?</h2>
+				<div class="pillars">
+					<div class="pillar">
+						<h3>For writers and roleplayers</h3>
+						<p>Build personas in Markdown, switch threads into roleplay mode with per-scene memory, and let each persona build up its own continuity across conversations.</p>
+					</div>
+					<div class="pillar">
+						<h3>For privacy-conscious users</h3>
+						<p>Runs on your machine. No database, no cloud, no telemetry. All state is readable text on disk.</p>
+					</div>
+					<div class="pillar">
+						<h3>For tinkerers</h3>
+						<p>Personas are Markdown. Themes are JSON. Django + HTMX + Alpine — easy to read and easy to extend.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features -->
+		<section class="section" id="features">
+			<div class="container">
+				<h2>Features</h2>
+				<div class="features">
+					<div class="feature">
+						<h3>Per-persona memory</h3>
+						<p>Each persona maintains its own evolving notes about you, merged in the background as you talk.</p>
+					</div>
+					<div class="feature">
+						<h3>Roleplay mode</h3>
+						<p>Per-thread scenarios and scene-level memory, with persona memory suppressed in-scene for immersion. Fork any chat into a roleplay thread without losing context.</p>
+					</div>
+					<div class="feature">
+						<h3>Context files</h3>
+						<p>Upload documents per-persona or globally; reference local directories to pull in live files without copying them.</p>
+					</div>
+					<div class="feature">
+						<h3>Multi-session</h3>
+						<p>Sessions grouped by persona, pinnable, auto-titled, with drafts saved per thread.</p>
+					</div>
+					<div class="feature">
+						<h3>OpenRouter</h3>
+						<p>Hundreds of models, with per-persona model overrides.</p>
+					</div>
+					<div class="feature">
+						<h3>Themes</h3>
+						<p>Dark and light modes across 16 color themes — including the one you're looking at.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Screenshots -->
+		<section class="section" id="screenshots">
+			<div class="container">
+				<h2>Screenshots</h2>
+				<p class="section-lede">Click any image to enlarge.</p>
+				<div class="screenshot-grid">
+					<!-- To add or remove a screenshot, copy/delete one <figure> block. -->
+					<figure class="screenshot">
+						<img src="images/main-screenshot.png" alt="Liminal Salt main interface" class="modal-image" data-modal-title="Main" width="3366" height="1882" loading="lazy">
+						<figcaption>Main</figcaption>
+					</figure>
+					<figure class="screenshot">
+						<img src="images/chat-chatbot.png" alt="Chatbot conversation view" class="modal-image" data-modal-title="Chatbot" width="3366" height="1882" loading="lazy">
+						<figcaption>Chatbot</figcaption>
+					</figure>
+					<figure class="screenshot">
+						<img src="images/chat-roleplay.png" alt="Roleplay mode conversation view" class="modal-image" data-modal-title="Roleplay" width="3366" height="1882" loading="lazy">
+						<figcaption>Roleplay</figcaption>
+					</figure>
+					<figure class="screenshot">
+						<img src="images/persona-memory.png" alt="Persona memory editor" class="modal-image" data-modal-title="Persona Memory" width="3366" height="1882" loading="lazy">
+						<figcaption>Persona Memory</figcaption>
+					</figure>
+					<figure class="screenshot">
+						<img src="images/persona-settings.png" alt="Persona settings panel" class="modal-image" data-modal-title="Persona Settings" width="3366" height="1882" loading="lazy">
+						<figcaption>Persona Settings</figcaption>
+					</figure>
+					<figure class="screenshot">
+						<img src="images/settings.png" alt="App settings panel" class="modal-image" data-modal-title="Settings" width="3366" height="1882" loading="lazy">
+						<figcaption>Settings</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<!-- Theme -->
+		<section class="section" id="theme">
+			<div class="container">
+				<div class="theme-card">
+					<div class="theme-card-text">
+						<h2>Like the look?</h2>
+						<p>
+							The Liminal Salt color theme — the one you're looking at right now —
+							is available as a standalone palette for your editor and terminal.
+							Earthy greige tones, sage and stone accents, dark and light variants,
+							and every foreground/background pair meets WCAG 2.1 AA.
+						</p>
+						<p class="theme-tools">
+							<strong>Editors:</strong> VS Code, Neovim, Zed, JetBrains<br>
+							<strong>Terminals:</strong> Alacritty, Ghostty, iTerm2, WezTerm<br>
+							<strong>Other:</strong> tmux
+						</p>
+						<a class="btn btn-primary" href="https://github.com/irvj/liminal-salt-theme" target="_blank" rel="noopener">Theme on GitHub</a>
+					</div>
+					<div class="theme-card-palette" aria-hidden="true">
+						<span class="swatch" style="background:#1a1c1b" title="Background #1a1c1b"></span>
+						<span class="swatch" style="background:#242726" title="Card #242726"></span>
+						<span class="swatch" style="background:#2e312f" title="Border #2e312f"></span>
+						<span class="swatch" style="background:#e8e4dc" title="Foreground #e8e4dc"></span>
+						<span class="swatch" style="background:#c5c1b8" title="Foreground secondary #c5c1b8"></span>
+						<span class="swatch" style="background:#8fac98" title="Accent #8fac98"></span>
+						<span class="swatch" style="background:#a3bfac" title="Accent hover #a3bfac"></span>
+						<span class="swatch" style="background:#95bebe" title="Ring #95bebe"></span>
+						<span class="swatch" style="background:#7dba8a" title="Success #7dba8a"></span>
+						<span class="swatch" style="background:#c9a86c" title="Warning #c9a86c"></span>
+						<span class="swatch" style="background:#cc8585" title="Danger #cc8585"></span>
+						<span class="swatch" style="background:#7eb8c9" title="Syntax number #7eb8c9"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Quick Start -->
+		<section class="section quick-start" id="quick-start">
+			<div class="container-narrow">
+				<h2>Quick start</h2>
+				<pre><code>git clone https://github.com/irvj/liminal-salt.git
+cd liminal-salt
+python run.py</code></pre>
+				<p>
+					The launcher creates a virtual environment and installs dependencies on
+					first run. Open <code>http://localhost:8420</code> and follow the setup wizard.
+				</p>
+				<p><strong>Requirements</strong></p>
+				<ul>
+					<li>Python 3.10+</li>
+					<li>An <a href="https://openrouter.ai/" target="_blank" rel="noopener">OpenRouter</a> API key</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Scope -->
+		<section class="section" id="scope">
+			<div class="container-narrow">
+				<h2>Scope</h2>
+				<p>
+					Liminal Salt is a local application, not a hosted service. You run it
+					on your own machine with your own API key. Running it as a service
+					for other people is outside the project's scope and would make you
+					the operator of whatever you built.
+				</p>
+				<p>
+					Using Liminal Salt means agreeing to the
+					<a href="https://github.com/irvj/liminal-salt/blob/main/AGREEMENT.md" target="_blank" rel="noopener">user agreement</a>
+					— short, plain-language, covers age, open source, non-determinism,
+					provider terms, and responsibility for content. The app presents it
+					once during setup.
+				</p>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p>
+				MIT licensed ·
+				<a href="https://github.com/irvj/liminal-salt" target="_blank" rel="noopener">GitHub</a> ·
+				<a href="https://github.com/irvj/liminal-salt/blob/main/AGREEMENT.md" target="_blank" rel="noopener">Agreement</a>
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
