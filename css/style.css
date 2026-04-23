@@ -575,6 +575,14 @@ code, pre {
 	margin-bottom: 0.4em;
 }
 
+.quick-start-note {
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 1px dashed var(--border);
+	color: var(--foreground-secondary);
+	font-size: 0.95rem;
+}
+
 /* ============================================================
    404 page
    ============================================================ */

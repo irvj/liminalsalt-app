@@ -63,7 +63,7 @@
 					</div>
 					<div class="pillar">
 						<h3>For tinkerers</h3>
-						<p>Personas are Markdown. Themes are JSON. Django + HTMX + Alpine — easy to read and easy to extend.</p>
+						<p>Personas are Markdown. Themes are JSON. Rust (Axum) + HTMX + Alpine — easy to read and easy to extend.</p>
 					</div>
 				</div>
 			</div>
@@ -180,16 +180,20 @@
 				<h2>Quick start</h2>
 				<pre><code>git clone https://github.com/irvj/liminal-salt.git
 cd liminal-salt
-python run.py</code></pre>
+cargo run -p liminal-salt</code></pre>
 				<p>
-					The launcher creates a virtual environment and installs dependencies on
-					first run. Open <code>http://localhost:8420</code> and follow the setup wizard.
+					Cargo builds and runs the app. Open <code>http://localhost:8420</code>
+					and follow the setup wizard.
 				</p>
 				<p><strong>Requirements</strong></p>
 				<ul>
-					<li>Python 3.10+</li>
+					<li><a href="https://rustup.rs/" target="_blank" rel="noopener">Rust</a> (stable)</li>
 					<li>An <a href="https://openrouter.ai/" target="_blank" rel="noopener">OpenRouter</a> API key</li>
 				</ul>
+				<p class="quick-start-note">
+					A standalone desktop app — macOS, Windows, Linux, built on Tauri —
+					is the next milestone. The webapp above is how to run Liminal Salt today.
+				</p>
 			</div>
 		</section>
 

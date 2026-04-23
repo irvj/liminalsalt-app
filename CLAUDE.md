@@ -4,9 +4,10 @@ Marketing/info site for the Liminal Salt app. Single-page static site, deployed
 to **liminalsalt.app** via Cloudflare Pages. No build step — Cloudflare serves
 the repo root as-is.
 
-The companion app lives at `../liminal-salt` (Django + HTMX + Alpine, self-hosted
-LLM chatbot). The standalone color theme lives at `../liminal-salt-theme`. This
-repo is just the landing page.
+The companion app lives at `../liminal-salt` (Rust + Axum + Tera + HTMX + Alpine,
+self-hosted LLM chatbot; a Tauri desktop build is the next milestone). The
+standalone color theme lives at `../liminal-salt-theme`. This repo is just the
+landing page.
 
 ## Stack
 
